@@ -34,7 +34,7 @@ public class Controller implements Initializable {
     private static HttpURLConnection con;
     private static final String apiURL = "https://wsapi.simsimi.com/190410/talk";
     private static URL url;
-    private static final String apiKey = "R5kHSoRajG4Jxj0jj01uC1Oilz1LMtg4irrnc5ae";
+    private static final String apiKey = "****************************************";
     private static int minLength = 1;
     private static int maxLength = 256;
     private static float minProb = 0;

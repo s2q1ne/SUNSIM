@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dimigo.simsim.Setting">
+<children>
+    <AnchorPane prefHeight="600.0" prefWidth="900.0">
+        <children>
+            <Label layoutX="58.0" layoutY="105.0" text="심심이 성격 ">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="settingPersonality" layoutX="61.0" layoutY="183.0" prefHeight="100.0" prefWidth="600.0" visibleRowCount="3">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="착함" />
+                        <String fx:value="나쁨" />
+                        <String fx:value="기본" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label layoutX="60.0" layoutY="300.0" text="심심이 말길이">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="settingLength" layoutX="63.0" layoutY="378.0" prefHeight="100.0" prefWidth="600.0" visibleRowCount="3">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="장문형" />
+                        <String fx:value="단답형" />
+                        <String fx:value="일반형" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button layoutX="688.0" layoutY="192.0" mnemonicParsing="false" onAction="#saveSetting" prefHeight="286.0" prefWidth="198.0" text="적용">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Button>
+        </children>
+    </AnchorPane>
+    <MenuBar prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: #e6e6e6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+        <menus>
+            <Menu mnemonicParsing="false" text="기능">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#mainScene" text="심심이와 대화하기" />
+                    <MenuItem mnemonicParsing="false" onAction="#todayWordsScene" text="오늘의 말" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="설정">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="심심이 성격 설정" />
+                    <MenuItem mnemonicParsing="false" onAction="#testWordsScene" text="심심이 성격 테스트" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</children>
+</Pane>

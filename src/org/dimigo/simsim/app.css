@@ -1,0 +1,14 @@
+Label#text1{
+    -fx-font-family:Serif;
+    -fx-font-size:50pt;
+    -fx-alignment: center;
+}
+items>*>*{
+    -fx-pref-height: 70px;
+}
+items>*>*:even{
+    -fx-background-color: red;
+}
+items>*>*:odd{
+    -fx-background-color: blue;
+}

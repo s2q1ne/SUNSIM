@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dimigo.simsim.TodayWords">
+    <children>
+      <Label layoutX="73.0" layoutY="145.0" text="오늘의 말">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+        <MenuBar prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: #e6e6e6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+            <menus>
+                <Menu mnemonicParsing="false" text="기능">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#mainScene" text="심심이와 대화하기" />
+                        <MenuItem mnemonicParsing="false" text="오늘의 말" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="설정">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#settingScene" text="심심이 성격 설정" />
+                        <MenuItem mnemonicParsing="false" onAction="#testWordsScene" text="심심이 성격 테스트" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Label fx:id="display_text" layoutX="73.0" layoutY="276.0" prefHeight="141.0" prefWidth="632.0" style="-fx-background-color: #eee;" text=" 당신의 말에 불순물 0%" textAlignment="CENTER" textFill="#1e8a68">
+         <font>
+            <Font size="54.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
